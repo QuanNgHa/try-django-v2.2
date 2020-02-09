@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+
+{% block head_title %}Home{% endblock %}
+
+{% block content %}
+
+Request: {{ request.user }} </br>
+Request Path: {{ request.path }} </br>
+
+User: {{ user }}
+Authen: {{ user.is_authenticated }}
+
+
+{% endblock %}
