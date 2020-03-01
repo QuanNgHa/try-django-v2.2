@@ -4,12 +4,12 @@
 {% block head_title %}Home{% endblock %}
 
 {% block content %}
+<h1>{{ title }} </h1>
 
-Request: {{ request.user }} </br>
-Request Path: {{ request.path }} </br>
+{% for a in blog_list %}
+{% include 'blog/list-inline.html' with blog_post=a truncate=True detail=False %}
+{% endfor %}
 
-User: {{ user }}
-Authen: {{ user.is_authenticated }}
 
 
 {% endblock %}
